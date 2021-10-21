@@ -1,0 +1,91 @@
+{% extends 'base.html' %}
+
+{% block head %}
+
+<title>Search Page</title>
+<link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+{% endblock %}
+
+{% block body %}
+<head>
+
+
+</head>
+<div class="content">
+    <h1 style="text-align: center">did the woman have at least one affair?</h1>
+    <img src='https://previews.123rf.com/images/stocking/stocking1211/stocking121100600/16599295-portrait-of-a-thoughtful-man-having-doubts.jpg' style="max-width:none;max-height:none;width:200;height:200;margin-left:50%;-webkit-transform:translateX(-50%);-moz-transform:translateX(-50%);-ms-transform:translateX(-50%);-o-transform:translateX(-50%);transform:translateX(-50%)">
+
+</div>
+
+
+    <div class="form" typeof="table" >
+
+        <form action="/predict" method="POST">
+            <label for="rate_marriage">rate_marriage:</label>
+            <select name="rate_marriage" id="rate_marriage">
+            <option value="1">1 = very poor,</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5 = very good</option>required>
+            </select>
+
+
+            <label for="religious">religious:</label>
+            <select name="religious" id="religious">
+            <option value="1">1 = not religious</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4 = strongly religious)</option>required>
+            </select>
+
+            <label for="age">age:</label>
+            <input type="number" name="age" id="age" placeholder="age"  step="any" required>
+            <label for="yrs_married">yrs_married:</label>
+            <input type="number" name="yrs_married" id="yrs_married" placeholder="yrs_married" step="any" required>
+            <label for="children">children:</label>
+            <input type="number" name="children" id="children" placeholder="children"  step="any" required>
+            <br>
+
+            <label for="educ">educ:</label>
+            <select name="educ" id="educ">
+            <option value="9">grade school</option>
+            <option value="12">high school</option>
+            <option value="14">some college</option>
+            <option value="16">college graduate</option>
+            <option value="17">some graduate school</option>
+            <option value="20">advanced degree</option>required>
+            </select>
+
+
+            <label for="occupation">occupation:</label>
+            <select name="occupation" id="occupation">
+            <option value="1">student</option>
+            <option value="2">farming/semi-skilled/unskilled</option>
+            <option value="3">white collar</option>
+            <option value="4">teacher/nurse/writer/technician/skilled</option>
+            <option value="5">managerial/business</option>
+            <option value="6">professional with advanced degree</option>required>
+            </select>
+
+            <label for="occupation_husb">occupation_husb:</label>
+            <select name="occupation_husb" id="occupation_husb">
+            <option value="1">student</option>
+            <option value="2">farming/semi-skilled/unskilled</option>
+            <option value="3">white collar</option>
+            <option value="4">teacher/nurse/writer/technician/skilled</option>
+            <option value="5">managerial/business</option>
+            <option value="6">professional with advanced degree</option>required>
+
+            </select>
+            <br><br>
+            <input type="submit" value="Predict">
+
+        </form>
+
+    </div>
+
+
+
+</div>
+{% endblock %}
