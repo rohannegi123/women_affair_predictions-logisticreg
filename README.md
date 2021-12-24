@@ -7,5 +7,4 @@
 * The dataset I chose is the affairs dataset that comes with Statsmodels. It was derived from a survey of women in 1974 by Redbook magazine, in which married women were asked about their participation in extramarital affairs. More information about the study is available in a 1978 paper from the Journal of Political Economy.
 
 
-# model deployed on heroku server
-* https://women-affair-prediction-ml.herokuapp.com/
+
